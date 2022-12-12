@@ -1,0 +1,28 @@
+//jquery increment - decrement function 
+// onclick="add()" , onclick="remove()" to used it.
+
+<script>
+	function add(){
+
+  var input = $('#noOfRoom'),
+      value = input.val();
+  input.val(++value);
+  
+  if(value > 0){
+    $('#subs').removeAttr('disabled');
+  }
+
+}
+function remove(){
+
+   var input = $('#noOfRoom'),
+       value = input.val();
+      
+   if(value > 0){
+     input.val(--value);
+   }else{
+     $('#subs').attr('disabled','disabled');
+  }
+
+}
+</script>
